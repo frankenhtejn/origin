@@ -13,4 +13,9 @@ for i in range(1, quant+1):
        else:
            print("бесплатный билет")
 
+
 print ("сумарная стоимость билетов: %s рублей" %(count))
+if quant>3 and count>0:
+    sale=int (count/10)
+    count=count-sale
+    print ("у вас 10% скидка она состовляет {} рублей итого с вас {} рублей".format(sale, count))
