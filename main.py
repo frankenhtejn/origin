@@ -1,6 +1,16 @@
-per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
-money=float(input("планируемая сумма взноса:"))
-proc=money/100
-proc_list=list(per_cent.values())
-deposit = [round(i * proc,2) for i in proc_list]
-print ("максимальный доход:",max(deposit))
+quant=int(input("сколько билетов планируете купить:"))
+count=0
+for i in range(1, quant+1):
+   text='возраст ' + str(i) + ' клиента:'
+   age = int(input (text))
+   if age >25:
+        count += 1390
+        print ("стоимость билета 1390 рублей")
+   else:
+       if age>=18:
+           count += 990
+           print("стоимость билета 990 рублей")
+       else:
+           print("бесплатный билет")
+
+print ("сумарная стоимость билетов: %s рублей" %(count))
